@@ -1,0 +1,585 @@
+﻿@font-face {
+    font-family: bold_f; /* Имя шрифта */
+    src: url(/resource/bold.ttf); /* Путь к файлу со шрифтом */
+}
+
+/* VXP */
+@font-face {
+    font-family: "Roboto Condensed";
+	src: url(/resource/RobotoCondensed-Regular.ttf);
+}
+
+body 
+{
+		font: 12px/18px Arial, sans-serif; 
+		background: #FFFFFF;
+}
+
+
+input[type=text], input[type=password], input[type=email] /*Поля логина и пароля*/
+{
+		margin: 10px;
+        padding: 5px 5px;
+        height: 20px;
+        width: 88.5%;
+        border-left: 5px solid #187DC6;
+        border-top:1px solid #187DC6;
+		border-bottom:1px solid #187DC6;
+		border-right:1px solid #187DC6;
+        background:#E9EAEB;
+		margin-bottom: 5px;
+}
+nput[type=text]:hover, input[type=password]:hover, input[type=email]:hover{background:#E6E6E6}
+input[type=submit], input[type=reset] {width:100%;color: #000; text-decoration: none;  padding: 8px; border: 1px solid #000000; font-weight: bold; } 
+input[type=submit]:hover, input[type=reset]:hover { background: #E6E6E6}
+
+
+
+.choose{width: 500px;margin: 50px auto;}
+.choose a{
+display:block;
+width: 546px;
+  line-height: 2.2em;
+  text-decoration:none;
+  font-size: 15px;
+  text-align: center;
+  border:1px solid black;
+  color:black} 
+
+.logform {
+	width:300px;
+	position:absolute;
+	left:50%; 
+	right:50%; 
+	top:50%; 
+	/*margin: -100px 0 0 -100px;*/
+	margin: -100px 0 0 -150px;
+	border: 1px solid #187DC6;
+	box-shadow: 25px 25px 10px rgba(0,0,0,0.5);
+}
+
+#calendar3 {
+
+margin: 10px auto;
+  width: 184px;
+  line-height: 1.2em;
+  font-size: 15px;
+  text-align: center;
+  border:1px solid black;
+}
+#calendar3 thead tr:last-child, #calendarW thead tr:last-child{
+ font-size: small;
+  color: rgb(85, 85, 85);
+}
+#calendar3 thead tr:nth-child(1) td:nth-child(2), 
+#calendarW thead tr:nth-child(1) td:nth-child(2){
+  color: rgb(50, 50, 50);
+}
+#calendar3 thead tr:nth-child(1) td:nth-child(1):hover, #calendar3 thead tr:nth-child(1) td:nth-child(3):hover, 
+#calendarW thead tr:nth-child(1) td:nth-child(1):hover, #calendarW thead tr:nth-child(1) td:nth-child(3):hover{
+  cursor: pointer;
+}
+#calendar3 tbody td, #calendar3 tbody td:nth-child(n+6) {
+font-family: arial,sans-serif;
+  font-size: 11px;
+color: rgb(68,68,68);
+text-decoration: none;
+  user-select: none;
+}
+
+#calendar3 tbody td.today {
+  outline: 3px solid black;
+}
+
+#calendar3 tbody td a{
+width:12px;
+  display: inline-block;
+  font-family: arial,sans-serif;
+  font-size: 11px;
+  color: rgb(68,68,68);
+  text-decoration: none;
+  user-select: none;
+  padding: .2em 1.2em;
+  border-radius: 10px;
+  transition: all .218s ease 0s;
+}
+#calendar3 tbody td a:hover {
+  color: black;
+  background: #f7f7f7 linear-gradient(#f7f7f7, #f1f1f1);
+  box-shadow: 0 1px 2px rgba(0,0,0,.1);
+}
+#calendar3 tbody td a:active {
+  color: rgb(51,51,51);
+  background: rgb(238,238,238) linear-gradient(rgb(238,238,238), rgb(224,224,224));
+  box-shadow: 0 1px 2px rgba(0,0,0,.1) inset;
+}
+#calendar3 tbody td a.today{
+  outline: 1px solid black;
+}
+#calendar3 tbody td .None{
+	width:12px;
+  display: inline-block;
+  font-family: arial,sans-serif;
+  font-size: 11px;
+  color: rgb(68,68,68);
+  text-decoration: none;
+  user-select: none;
+  padding: .2em 1.2em;
+  border-radius: 10px;
+  transition: all .218s ease 0s;
+  background:#BDBDBD;
+}
+
+#calendarW {
+border-collapse: collapse;
+margin-left:39%;
+  line-height: 1.2em;
+  font-size: 15px;
+  text-align: center;
+  border:1px solid black;
+}
+#calendarW tbody td, th{
+padding:0 10px;
+font-family: arial,sans-serif;
+  font-size: 11px;
+color: rgb(68,68,68);
+text-decoration: none;
+min-width: 20px;
+  user-select: none;
+ border: 1px solid black;
+}
+#calendarW tbody td .FIO{
+	text-align:left;
+}
+#calendarW tbody td.n{
+	font-size:15px;
+}
+#calendarW tbody td.n:hover{
+	color:#C20000;
+	cursor:pointer;
+	background:#E4E4E4;
+}
+#calendarW tbody td a{
+width: 78px;
+  display: inline-block;
+  font-family: arial,sans-serif;
+  font-size: 11px;
+  color: rgb(68,68,68);
+  text-decoration: none;
+  user-select: none;
+  padding: .2em 1.2em;
+  transition: all .218s ease 0s;
+}
+#calendarW tbody td a:hover {
+  color: black;
+  background-color: #E6E6E6;
+}
+#calendarW tbody td a:active {
+  color: rgb(51,51,51); 
+  background-color: rgb(238,238,238);
+}
+
+#calendarStat {
+	border-collapse: collapse;
+margin: 10px auto;
+  width: 300px;
+  line-height: 1.2em;
+  font-size: 15px;
+  text-align: center;
+  border:1px solid #c2c2c2;
+}
+#calendarStat thead td{
+	line-height: 20px;
+  font-size: 10px;
+  color: #696969;
+  text-transform: uppercase;
+  background: #f3f3f3;
+	text-align: center;
+  text-shadow: 0 1px rgba(255, 255, 255, 0.8);
+}
+#calendarStat tbody td{
+  font-family: arial,sans-serif;
+  font-size: 11px;
+  user-select: none;
+  font-weight: bold;
+  border: 1px solid #c2c2c2;
+  text-shadow: 0 1px rgba(255, 255, 255, 0.8);
+  width: 30px;
+  line-height: 28px;
+  color: #666;
+  background-image: linear-gradient(to bottom, #eaeaea 0%, #e5e5e5 60%, #d9d9d9 100%);
+}
+#calendarStat tbody td.Green, #calendarStat tbody td.GreenDis{
+  color: #f3f3f3;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+  background: #6DC07A;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.50);
+}
+#calendarStat tbody td.Green{cursor:pointer;}
+#calendarStat tbody td.Green:hover{
+	background: #7CD98A;
+}
+#calendarStat tbody td.Red, #calendarStat tbody td.RedDis{
+  color: #f3f3f3;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+  background: #C06D6D;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.50);
+}
+#calendarStat tbody td.Red{cursor:pointer;}
+#calendarStat tbody td.Red:hover{
+	background: #DF8181;
+}
+
+/*a.backToCal{position:fixed;margin:0 10px;border: 5px solid #187DC6;                                     
+border-top-style:hidden;border-bottom-style:hidden;border-right-style:hidden;font-weight:bolder; float:left; float:left;}
+a.backToCal:hover{background:#E6E6E6}*/
+
+a.backToCal{
+text-decoration:none;
+position:fixed;
+float:left;
+font-weight:bolder; 
+float:left; 
+width:25px; 
+margin:0 10px; 
+color:#000;                                                            
+border: 5px solid #187DC6 ;
+border-top-width:1px;
+border-right-width:1px;
+border-bottom-width:1px;
+background: #E9EAEB;
+color: rgba(24,125,198,1);
+padding: 8px;
+font-size: 15px; 
+font-family: bold_f;
+position: relative;
+transition: all 50ms ease;
+z-index:1;
+}
+a.backToCal:before {
+content:'';
+position: absolute;
+top: 0px;
+left: 0px;
+width: 0px;
+height: 100%;
+color: #FFF;
+background: rgba(24,125,198,1);
+transition: all 0.4s ease;
+z-index:-1;
+} 
+a.backToCal:hover:before{ 
+width: 100%;color:#fff;
+z-index:-1;
+} 
+a.backToCal:hover{ 
+color:#fff;
+} 
+.monthname {margin:0 auto; width:150px;text-align:center;font-size:15px;} 
+.wdname {margin:10px auto; width:460px;text-align:center;font-size:40px;margin-bottom:15px} 
+
+/*a.logout{position:fixed;border: 5px solid #187DC6;
+border-top-style:hidden;border-bottom-style:hidden;border-right-style:hidden;font-weight:bolder; left:90%; padding:10px 16px; cursor:pointer;color:black; text-decoration:none} 
+a.logout:hover{background:#E6E6E6}
+*/
+a.logout{
+text-decoration:none;
+position:fixed;
+float:left;
+font-weight:bolder;  
+left:90%; padding:10px 16px; cursor:pointer;color:black;
+width:50px; 
+margin:0 10px; 
+color:#000;                                                            
+border: 5px solid #187DC6 ;
+border-top-width:1px;
+border-right-width:1px;
+border-bottom-width:1px;
+background: #E9EAEB;
+color: rgba(24,125,198,1);
+padding: 8px;
+font-size: 15px; 
+font-family: bold_f;
+position: relative;
+transition: all 50ms ease;
+z-index:1;
+}
+a.logout:before {
+content:'';
+position: absolute;
+top: 0px;
+left: 0px;
+width: 0px;
+height: 100%;
+color: #FFF;
+background: rgba(24,125,198,1);
+transition: all 0.4s ease;
+z-index:-1;
+} 
+a.logout:hover:before{ 
+width: 100%;color:#fff;
+z-index:-1;
+} 
+a.logout:hover{ 
+color:#fff;
+} 
+
+
+a.strL{padding-left:5px;
+color:black;
+text-decoration: none;
+user-select: none;float:left;}
+a.strR{padding-right:5px;
+color:black;
+text-decoration: none;
+user-select: none;float:right;}
+
+.chooseAllCb{
+	text-decoration:none;
+}
+
+/*.saveJurnal{
+	margin:0 auto;
+	width:300px;
+	border: 5px solid #187DC6;
+        border-top-style:hidden;border-bottom-style:hidden;border-right-style:hidden;
+}
+*/
+.saveJurnal{
+position:relative; 
+margin:0 auto;
+width:300px;                                                         
+}
+
+.groupname {margin:20px auto; width:300px; font-family: less;text-align:center;font-size:40px;} 
+.groupname a{margin-left:5px}
+
+#cb {position:absolute;visibility:hidden}
+.hiden{position:absolute;visibility:hidden}
+.addTable{width:200px;height:50px;}
+.editBlock{margin:200px auto;width:300px;border:1px solid black;display:inline-table;}
+.addDay{    margin: 15px;
+    width: 90%;}
+
+
+/*-------------------------<valera>--------------------------*/
+#menu_form{
+	width:		500px;
+	height:		40px;
+	position:	absolute;
+	/*border: 	none;
+	margin: 0;*/	
+}
+
+#menu_form div:first-child{
+	margin-left: 0px;
+}
+
+.menu_button{
+    position: 		relative;
+	margin-top: 		0;
+    display: 		inline-block;
+    text-align:		center;
+}
+
+.menu_button input{
+	float:				left;
+    margin-left:		1px;
+    padding:			0;
+    width:				auto;
+    height:				40px;
+    border: 			2px solid rgba(24,125,198,1);
+    /*border-radius: 		40px;*/
+    background: 		transparent;
+    color: 				rgba(24,125,198,1);
+    letter-spacing: 	1px;
+    font-size: 			18px;
+    font-family: 		'Montserrat', sans-serif;
+    -webkit-transition: background-color 0.3s, color 0.3s, width 0.3s, border-width 0.3s, border-color 0.3s;
+    transition: 		background-color 0.3s, color 0.3s, width 0.3s, border-width 0.3s, border-color 0.3s;
+}
+
+.menu_button button[type='submit']{
+	margin-top: 5px;
+	margin-bottom: 10px;
+    padding:			0;
+    height:				40px;
+	width:				auto;
+    border: 			2px solid rgba(24,125,198,1);
+    /*border-radius: 		40px;*/
+    background: 		transparent;
+    color: 				rgba(24,125,198,1);
+    letter-spacing: 	1px;
+    font-size: 			18px;
+    font-family: 		'Montserrat', sans-serif;
+    -webkit-transition: background-color 0.3s, color 0.3s, width 0.3s, border-width 0.3s, border-color 0.3s;
+    transition: 		background-color 0.3s, color 0.3s, width 0.3s, border-width 0.3s, border-color 0.3s;
+}
+
+.menu_button input:hover, .menu_button button:hover {
+    background-color: 	rgba(24,125,198,1);
+    color: 				#fff;
+}
+
+.menu_button input:focus, .menu_button button:focus {
+    outline: 			none;
+}
+/*-------------------------</valera>--------------------------*/
+
+/*-------------------------<vasya>--------------------------*/
+.upperLeftMenu 
+{
+	position: absolute;
+}
+.upperRightMenu 
+{
+	font-family: "Roboto Condensed";
+	font-size: 16px;
+	text-align: right;
+}
+.profileName 
+{
+	/*text-align: right;*/
+	font-family: "Roboto Condensed";
+	font-size: 16px;
+	margin-top: 20px;
+}
+.profileGroupName 
+{
+	font-family: "Roboto Condensed";
+	font-size: 16px;
+}
+.profileAvatar 
+{
+	/*text-align: right;*/
+	float: right;
+	margin-left: 5px;
+	margin-top: 3px;
+	margin-right: 40px;
+}
+.profilePassesCount 
+{
+	font-family: "Roboto Condensed";
+	font-size: 16px;
+	/*text-align: right;*/
+	/*margin-top: -21px;*/
+	/*margin-top: -15px;*/
+	
+	margin-top: -18px;
+	margin-right: 200px;
+}
+.profileDivider 
+{
+	margin-top: 20px;
+}
+/* @media screen and (max-width:365px) { */
+@media screen and (max-width:480px) /*and (min-width: 365px)*/ {
+	/*.top-level { position: absolute; width: 98%; margin-left: -100px; }*/
+	ul.top-level {
+		position: relative;
+		width: 103%; /*margin: 0;*/ margin-top: -8px; margin-left: -8px; /* VXP: Something weird here */
+		padding: 0;
+	}
+	/* .top-level li { width: 100%;  } */
+	ul.top-level li { width: 75px; }
+	ul.top-level li a {
+		text-align: center;
+		/*margin: -3px 0 0 -3px;*/
+		margin: 0;
+		padding: 12px 2px; /* VXP: Я нашёл! */
+		/*padding: 0;*/
+	}
+	ul.second-level { z-index: 123; width: 80px; }
+	ul.third-level { z-index: 124; width: 80px; position: static; margin: 0 0 0 20px; }
+	ul.fourth-level { z-index: 125; width: 80px; position: static; margin: 0 0 0 40px; }
+	
+	ul.second-level:before {
+		top: 5px;
+		left: -20px;
+	}
+	ul.fourth-level{
+		top: 5px;
+	}
+	ul.second-level li:hover ul.third-level,
+	ul.third-level li:hover ul.fourth-level {
+		display:block;
+		left: 80%;
+	}
+	/* Заебался. */
+	/* .second-level { width: 80px; } */
+	
+	.upperRightMenu {
+		padding: 0;
+		margin: 0;
+	}
+}
+/*-------------------------</vasya>--------------------------*/
+/*--------------------------<меню>---------------------------*/
+ul {
+  width:450px;/*исправить*/
+  padding:0;
+  font: 14px/14px Helvetica,Arial,sans-serif;
+  background: #187DC6;
+  box-shadow: 0 3px 3px rgba(0,0,0,.5);
+}
+li {
+  position: relative;
+  display: inline-block;
+  list-style: none;
+}
+li a {
+  display: block;
+  padding: 10px 15px;
+  color: #ccc;
+  text-decoration: none;
+}
+li a:hover {
+  color: white;
+  background: #0F5F98;
+}
+.top-level {
+  border-bottom: 1px solid #0F5F98;
+  
+  position: absolute;
+  margin-top: 0px; /* VXP: Какого без этого атрибута эта менюшка сдвигается вниз? */
+  margin-left: 5px;
+}
+/*второй уровень*/
+.second-level,
+.third-level,
+.fourth-level{
+  width: 150px;
+  border: 1px solid #0F5F98;
+}
+.top-level li:hover .second-level {
+  display:block;
+}
+.second-level:before {
+  top: -8px;
+  left: 15px;
+}
+.second-level {
+  position: absolute;
+  display:none;
+}
+.second-level li {
+  position: relative;
+  display: block;
+}
+/*трейтий и четвёртый уровени*/
+.second-level li:hover .third-level,
+.third-level li:hover .fourth-level{
+  display:block;
+  left: 100%;
+}
+.third-level:before,
+.fourth-level:before{
+  top: 10px;
+  left: -8px;
+}
+.third-level,
+.fourth-level{
+  position: absolute;
+  display:none;
+  top: 0;
+}

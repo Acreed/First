@@ -1,0 +1,864 @@
+﻿@font-face {
+    font-family: bold_f; /* Имя шрифта */
+    src: url(/resource/bold.ttf); /* Путь к файлу со шрифтом */
+}
+
+/* VXP */
+@font-face {
+    font-family: "Roboto Condensed";
+	src: url(/resource/RobotoCondensed-Regular.ttf);
+}
+
+body 
+{
+		margin:0;
+		font: 12px/18px Arial, sans-serif; 
+		background: #FFFFFF;
+}
+
+
+input[type=text], input[type=password], input[type=email] /*Поля логина и пароля*/
+{
+
+}
+/*input[type=text]:hover, input[type=password]:hover, input[type=email]:hover{background:#E6E6E6}*/
+input[type=submit], input[type=reset] {width:100%;color: #000; text-decoration: none;  padding: 8px; border: 1px solid #000000; font-weight: bold; } 
+input[type=submit]:hover, input[type=reset]:hover { background: #E6E6E6}
+
+.Page{ 
+	padding-left:250px;
+}
+
+.header     /* шапка при входе*/
+{
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 8%;
+  /*border:1px solid red;*/
+background: rgba(73,155,234,1);
+background: -moz-linear-gradient(left, rgba(73,155,234,1) 0%, rgba(32,124,229,1) 100%);
+background: -webkit-gradient(left top, right top, color-stop(0%, rgba(73,155,234,1)), color-stop(100%, rgba(32,124,229,1)));
+background: -webkit-linear-gradient(left, rgba(73,155,234,1) 0%, rgba(32,124,229,1) 100%);
+background: -o-linear-gradient(left, rgba(73,155,234,1) 0%, rgba(32,124,229,1) 100%);
+background: -ms-linear-gradient(left, rgba(73,155,234,1) 0%, rgba(32,124,229,1) 100%);
+background: linear-gradient(to right, rgba(73,155,234,1) 0%, rgba(32,124,229,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#499bea', endColorstr='#207ce5', GradientType=1 );
+-webkit-box-shadow: 0px 10px 18px 0px rgba(0,0,0,0.65);
+-moz-box-shadow: 0px 10px 18px 0px rgba(0,0,0,0.65);
+box-shadow: 0px 10px 18px 0px rgba(0,0,0,0.65);
+}
+
+.logform {
+	position:absolute;
+	width:300px;
+	left:50%; 
+	right:50%; 
+	top:50%;
+	margin: -100px 0 0 -150px;
+	border: 1px solid #187DC6;
+	border-left-width:thick;
+	box-shadow: 25px 25px 10px rgba(0,0,0,0.5);
+}
+
+.upperMenu   /*шапка с именем профиля*/
+{
+	position:relative;
+	top: 0;
+	/*height: 5%;*/ /* VXP: Серый, никогда так не делай с менюшкой */
+	height: 85px;
+	border:1px solid #3A80C6;
+	/*padding: 1%;*/ /* VXP: И так тоже */
+	background: rgb(58, 128, 198);
+	-webkit-box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.75);
+	box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.75);
+}
+
+.loginPage{
+		margin: 10px;
+        padding: 5px 5px;
+        height: 20px;
+        width: 88.5%;
+        border-left: 5px solid #187DC6;
+        border-top:1px solid #187DC6;
+		border-bottom:1px solid #187DC6;
+		border-right:1px solid #187DC6;
+        background:#E9EAEB;
+		margin-bottom: 5px;
+}
+.loginPage:hover{background:#E6E6E6}
+
+.choose{width: 500px;margin: 50px auto;}
+.choose a{
+display:block;
+width: 546px;
+  line-height: 2.2em;
+  text-decoration:none;
+  font-size: 15px;
+  text-align: center;
+  border:1px solid black;
+  color:black
+} 
+
+#calendar3 {
+
+  margin: 10px auto;
+  width: 184px;
+  line-height: 1.2em;
+  font-size: 15px;
+  text-align: center;
+  border: 1px solid #3A80C6;
+    background: #EBF5FF;
+}
+#calendar3 thead tr:last-child, #calendarW thead tr:last-child{
+ font-size: small;
+  color: rgb(46, 101, 156);
+}
+#calendar3 thead tr:nth-child(1) td:nth-child(2), 
+#calendarW thead tr:nth-child(1) td:nth-child(2){
+  color: rgb(46, 101, 156);
+}
+#calendar3 thead tr:nth-child(1) td:nth-child(1):hover, #calendar3 thead tr:nth-child(1) td:nth-child(3):hover, 
+#calendarW thead tr:nth-child(1) td:nth-child(1):hover, #calendarW thead tr:nth-child(1) td:nth-child(3):hover{
+  cursor: pointer;
+}
+#calendar3 tbody td, #calendar3 tbody td:nth-child(n+6) {
+font-family: arial,sans-serif;
+  font-size: 11px;
+color: rgb(46, 101, 156);
+text-decoration: none;
+  user-select: none;
+}
+
+#calendar3 tbody td.today {
+  outline: 3px solid black;
+}
+
+#calendar3 tbody td a{
+  width:12px;
+  display: inline-block;
+  font-family: arial,sans-serif;
+  font-size: 11px;
+  color: rgb(46, 101, 156);
+  text-decoration: none;
+  user-select: none;
+  padding: .2em 1.2em;
+  border-radius: 10px;
+  transition: all .218s ease 0s;
+}
+#calendar3 tbody td a:hover {
+  color: black;
+  background: #f7f7f7 linear-gradient(#f7f7f7, #f1f1f1);
+  box-shadow: 0 1px 2px rgba(0,0,0,.1);
+}
+#calendar3 tbody td a:active {
+  color: rgb(51,51,51);
+  background: rgb(238,238,238) linear-gradient(rgb(238,238,238), rgb(224,224,224));
+  box-shadow: 0 1px 2px rgba(0,0,0,.1) inset;
+}
+#calendar3 tbody td a.today{
+  outline: 1px solid rgb(46, 101, 156);
+}
+#calendar3 tbody td .None{
+	width:12px;
+  display: inline-block;
+  font-family: arial,sans-serif;
+  font-size: 11px;
+  color: rgb(46, 101, 156);
+  text-decoration: none;
+  user-select: none;
+  padding: .2em 1.2em;
+  border-radius: 10px;
+  transition: all .218s ease 0s;
+  background:#BDBDBD;
+}
+
+/*календарь пропусков calendarW  и всё что его дочернее*/
+#calendarW {
+	margin:0 auto;
+	margin-top: 10px;
+	border-collapse: collapse;
+	line-height: 2em;
+	text-align: center;
+}
+#calendarW tbody td, #calendarW thead th{
+	padding:0 10px;
+	font-family: arial,sans-serif;
+	font-size: 10pt;
+	color: rgb(43, 97, 152);
+	min-width: 20px;
+	border: 1px solid white;
+}
+#calendarW thead th
+{
+	background:#3A80C6;
+	color: white;
+}
+#calendarW tbody td .FIO{
+	text-align:left;
+	width: 300px;
+}
+#calendarW tbody td.n{
+	font-size:15px;
+	background:#B3E9B7;
+}
+#calendarW tbody td.n:hover{
+	color:#C20000;
+	cursor:pointer;
+	background:#E4E4E4;
+}
+#calendarW tbody td a{
+	display: inline-block;
+	font-family: arial,sans-serif;
+	font-size: 11px;
+	color: rgb(68,68,68);
+	text-decoration: none;
+	padding: .2em 1.2em;
+}
+#calendarW tbody td a:hover {
+    background:#DCEEFF;
+}
+#calendarW tbody td a:active {
+  background-color: rgb(238,238,238);
+}
+#calendarW tbody td.num
+{
+  background:#3A80C6;
+  color: white;
+}
+#calendarW thead th.num
+{
+  background:#3A80C6;
+  border-top-left-radius:10px;
+}
+#calendarW thead th.end
+{
+  background:#3A80C6;
+  border-top-right-radius:10px;
+}
+#calendarW tbody td
+{
+  background:#AED4F8;
+}
+#calendarW thead th.active
+{
+  background:#88DA8B;
+}
+#calendarW input[type=text]{
+	width: 30px;
+    background: #FFF;
+    border: 1px solid white;
+	text-align: center;
+	color: #2B6198;
+}
+#calendarW input[type=text]:disabled{
+	    background: #AED4F8;
+    border: 1px solid #AED4F8;
+}
+
+#calendarStat {
+	border-collapse: collapse;
+	margin: 10px auto;
+	width: 300px;
+	line-height: 1.2em;
+	font-size: 15px;
+	text-align: center;
+	border: 1px solid #4181BD;
+}
+#calendarStat thead td{
+	line-height: 20px;
+	font-size: 10px;
+	color: #4080C6;
+	text-transform: uppercase;
+	background: #E1F0FE;
+	text-align: center;
+	text-shadow: 0 1px rgba(255, 255, 255, 0.8);
+}
+#calendarStat tbody td{
+  font-family: arial,sans-serif;
+    font-size: 11px;
+    font-weight: bold;
+    border: 1px solid #4181BD;
+    text-shadow: 0 1px rgba(255, 255, 255, 0.8);
+    width: 30px;
+    line-height: 28px;
+    color: #3A80C6;
+    background-image: linear-gradient(to bottom, #E1F0FE 0%, #AED4F8 60%, #8CC5FF 100%);
+}
+#calendarStat tbody td.Green, #calendarStat tbody td.GreenDis{
+  color: #f3f3f3;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+  background: #6DC07A;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.50);
+}
+#calendarStat tbody td.Green{cursor:pointer;}
+#calendarStat tbody td.Green:hover{
+	background: #7CD98A;
+}
+#calendarStat tbody td.Red, #calendarStat tbody td.RedDis{
+  color: #f3f3f3;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+  background: #C06D6D;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.50);
+}
+#calendarStat tbody td.Red{cursor:pointer;}
+#calendarStat tbody td.Red:hover{
+	background: #DF8181;
+}
+
+#tableEdit {
+	width:100%;
+	border-collapse: collapse;
+	line-height: 2em;
+	text-align: center;
+}
+#tableEdit tbody td, #tableEdit thead th{
+	font-family: arial,sans-serif;
+	font-size: 11px;
+	min-width: 20px;
+	border: 1px solid white;
+	font-weight: bold;
+    color: #17589A;
+}
+#tableEdit thead th
+{
+	background:#3A80C6;
+	color:#FFF;
+}
+#tableEdit tbody td
+{
+  background:#AED4F8; 
+  
+}
+#tableEdit input
+{
+	display: inline-block;
+	width: 40%;
+	margin: 2%;
+	border:1px solid white; 
+	color: #245381;
+}
+#tableEdit input::-webkit-input-placeholder {color:rgba(58,128,198,0.58);}
+#tableEdit input::-moz-placeholder          {color:rgba(58,128,198,0.58);}
+#tableEdit input:-moz-placeholder           {color:rgba(58,128,198,0.58);}
+#tableEdit input:-ms-input-placeholder      {color:rgba(58,128,198,0.58);}
+/* рассписание преподователя или студента ,отображается в профиле*/
+
+#table {
+    border-collapse: collapse;
+    margin: 0 auto;
+    width: 60%;
+    min-width: 10px;
+    margin-top: 80px;
+}
+#table tbody td, th{
+	padding:0 10px;
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+	font-size: 1.5em;
+	    line-height: 200%;
+	color: rgb(68,68,68);
+	font-weight:normal;
+	text-align:center;
+	min-width: 5px;
+	border: 1px solid white;
+}
+#table th{
+	background:#3A80C6;
+}
+#table td{
+	background:#AED4F8;
+}
+#table th.num{
+	background:#3A80C6;
+	border:1px solid white;
+	border-bottom:1px solid white;
+	border-top-left-radius:10px;
+}
+#table th.sat{
+	border-top-right-radius:10px;
+}
+#table td.time{
+	    padding: 0;
+    width: 150px;
+    background: #3A80C6;
+}
+#table td.lesson{
+	background:#88DA8B;
+}
+/**/
+
+/*a.backToCal{position:fixed;margin:0 10px;border: 5px solid #187DC6;                                     
+border-top-style:hidden;border-bottom-style:hidden;border-right-style:hidden;font-weight:bolder; float:left; float:left;}
+a.backToCal:hover{background:#E6E6E6}*/
+
+a.backToCal{
+text-decoration:none;
+position:fixed;
+float:left;
+font-weight:bolder; 
+float:left; 
+width:25px; 
+margin:0 10px; 
+color:#000;                                                            
+border: 5px solid #187DC6 ;
+border-top-width:1px;
+border-right-width:1px;
+border-bottom-width:1px;
+background: #E9EAEB;
+color: rgba(24,125,198,1);
+padding: 8px;
+font-size: 15px; 
+font-family: bold_f;
+position: relative;
+transition: all 50ms ease;
+z-index:1;
+}
+a.backToCal:before {
+content:'';
+position: absolute;
+top: 0px;
+left: 0px;
+width: 0px;
+height: 100%;
+color: #FFF;
+background: rgba(24,125,198,1);
+transition: all 0.4s ease;
+z-index:-1;
+} 
+a.backToCal:hover:before{ 
+width: 100%;color:#fff;
+z-index:-1;
+} 
+a.backToCal:hover{ 
+color:#fff;
+} 
+/*название месяцев над таблицами*//*.monthname {position:absolute;margin:0 auto;padding-top:25px;top:5%;left:45.5%; width:15%;height:50px;text-align:center;font-size:2em; border: solid #187DC6;color:#187DC6;border-radius:10px;border-width:10px;}*/
+.monthname {
+	position: relative;
+    margin: 0 auto;
+    padding: 10px;
+    width: 280px;
+    text-align: center;
+    font-size: 18pt;
+    color: #2B6198;
+}
+/*день недели в заголовках*//*.wdname {position:absolute;margin:0 auto;top:20%;left:39.75%; padding:10px 0;width:460px;text-align:center;font-size:40px;margin-bottom:15px;color:#187DC6; }*/
+.wdname {
+	position:relative;
+	margin:0 auto;
+	padding:10px;
+	width:500px;
+	text-align:center;
+	font-size:31pt;
+	color:#2B6198; 
+}
+/*заголовок в топах*//*.TopHeader{border:1px solid blue;top:20%;left:45%;width:150px; color:#187DC6;}*/
+#TopHeader{
+	position:relative;
+	/*border:1px solid blue;*/
+	left:40%;
+	top:20px;
+	color:#187DC6;
+}
+ 
+ /*для заголовка топоав {color:#187DC6;border:5px solid #187DC6; border-top-style:hidden;border-bottom-style:hidden;border-right-style:hidden;}*/
+
+.Toplist
+{
+position:relative;top:20%;left:45%;
+}
+
+
+/*a.logout{position:fixed;border: 5px solid #187DC6;
+border-top-style:hidden;border-bottom-style:hidden;border-right-style:hidden;font-weight:bolder; left:90%; padding:10px 16px; cursor:pointer;color:black; text-decoration:none} 
+a.logout:hover{background:#E6E6E6}
+*/
+a.logout{
+text-decoration:none;
+position:fixed;
+float:left;
+font-weight:bolder;  
+left:90%; padding:10px 16px; cursor:pointer;color:black;
+width:50px; 
+margin:0 10px; 
+color:#000;                                                            
+border: 5px solid #187DC6 ;
+border-top-width:1px;
+border-right-width:1px;
+border-bottom-width:1px;
+background: #E9EAEB;
+color: rgba(24,125,198,1);
+padding: 8px;
+font-size: 15px; 
+font-family: bold_f;
+position: relative;
+transition: all 50ms ease;
+z-index:1;
+}
+a.logout:before {
+content:'';
+position: absolute;
+top: 0px;
+left: 0px;
+width: 0px;
+height: 100%;
+color: #FFF;
+background: rgba(24,125,198,1);
+transition: all 0.4s ease;
+z-index:-1;
+} 
+a.logout:hover:before{ 
+width: 100%;color:#fff;
+z-index:-1;
+} 
+a.logout:hover{ 
+color:#fff;
+} 
+
+
+a.str{
+	color: #2B6198;
+    text-decoration: none;
+}
+
+.saveJurnal{
+position:relative; 
+margin:0 auto;
+width:300px;                                                         
+}
+
+.groupname {color:rgb(46, 101, 156);margin:0 auto;padding: 20px 0; width:300px; font-family: less;text-align:center;font-size:40px;} 
+.groupname a{margin-left:5px}
+
+#cb{position:absolute;visibility:hidden}
+.hiden{position:absolute;visibility:hidden}
+.addTable{width:200px;height:50px;}
+.editBlock{margin:200px auto;width:300px;border:1px solid black;display:inline-table;}
+.addDay{    margin: 15px;
+    width: 90%;}
+
+
+/*-------------------------<valera>--------------------------*/
+#menu_form{
+	width:		500px;
+	height:		40px;
+	position:	absolute;
+	/*border: 	none;
+	margin: 0;*/	
+}
+
+#menu_form div:first-child{
+	margin-left: 0px;
+}
+
+.menu_button{
+    position: 		relative;
+	margin-top: 		0;
+    display: 		inline-block;
+    text-align:		center;
+}
+
+.menu_button input{
+	float:				left;
+    margin-left:		1px;
+    padding:			0;
+    width:				auto;
+    height:				40px;
+    border: 			2px solid rgba(24,125,198,1);
+    /*border-radius: 		40px;*/
+    background: 		transparent;
+    color: 				rgba(24,125,198,1);
+    letter-spacing: 	1px;
+    font-size: 			18px;
+    font-family: 		'Montserrat', sans-serif;
+    -webkit-transition: background-color 0.3s, color 0.3s, width 0.3s, border-width 0.3s, border-color 0.3s;
+    transition: 		background-color 0.3s, color 0.3s, width 0.3s, border-width 0.3s, border-color 0.3s;
+}
+
+.menu_button button[type='submit']{
+	margin-top: 5px;
+	margin-bottom: 10px;
+    padding:			0;
+    height:				40px;
+	width:				auto;
+    border: 			2px solid rgba(24,125,198,1);
+    /*border-radius: 		40px;*/
+    background: 		transparent;
+    color: 				rgba(24,125,198,1);
+    letter-spacing: 	1px;
+    font-size: 			18px;
+    font-family: 		'Montserrat', sans-serif;
+    -webkit-transition: background-color 0.3s, color 0.3s, width 0.3s, border-width 0.3s, border-color 0.3s;
+    transition: 		background-color 0.3s, color 0.3s, width 0.3s, border-width 0.3s, border-color 0.3s;
+}
+
+.menu_button input:hover, .menu_button button:hover {
+    background-color: 	rgba(24,125,198,1);
+    color: 				#fff;
+}
+
+.menu_button input:focus, .menu_button button:focus {
+    outline: 			none;
+}
+/*-------------------------</valera>--------------------------*/
+
+/*-------------------------<vasya>--------------------------*/
+.upperLeftMenu 
+{
+	position: absolute;
+}
+.upperRightMenu 
+{
+	font-family: "Roboto Condensed";
+	font-size: 16px;
+	text-align: right;
+}
+.profileName 
+{
+	/*text-align: right;*/
+	font-family: "Roboto Condensed";
+	    font-size: 15pt;
+    color: white;
+	margin-top: 20px;
+}
+.profileGroupName 
+{
+	font-family: "Roboto Condensed";
+	font-size: 16px;
+	color: white;
+}
+.profileAvatar 
+{
+	/*text-align: right;*/
+	float: right;
+	margin-left: 5px;
+	margin-top: 3px;
+	margin-right: 40px;
+	
+}
+.profilePassesCount 
+{
+	font-family: "Roboto Condensed";
+	font-size: 16px;
+	/*text-align: right;*/
+	/*margin-top: -21px;*/
+	/*margin-top: -15px;*/
+	color: white;
+	margin-top: -18px;
+	/*margin-right: 200px;*/
+	float:right;
+	padding: 5px;
+}
+.profileDivider 
+{
+	margin-top: 20px;
+}
+/*Меню NewGen*/  /*Всё что ниже боковая менюшка*/
+hr{
+	border: none; 
+	background-color: #3A80C6;
+    color: #3A80C6;
+    height: 2px;
+    width:90%;
+}
+.menu{
+  margin:0 auto;
+  width:250px;
+  height:100%;
+  background-color:#AED4F8;
+  position:fixed;
+  z-index:9999;
+  overflow-y:scroll;
+  overflow-x:hidden;
+}
+.menu::-webkit-scrollbar {
+    width: 1em;
+}
+ 
+.menu::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+ 
+.menu::-webkit-scrollbar-thumb {
+    background-color: #3A80C6;
+    /* outline: 1px solid white; */
+    border: 1px solid #AED4F8;
+    border-radius: 10px;
+}
+.menu ul{
+	    margin-top: 5px;
+		margin-bottom: 5px;	
+}
+.menu-institute{
+  color:white;
+      font-family: sans-serif;
+	  
+  font-size: 16pt;
+  padding:13px 10px;
+  background:#3A80C6;
+  font-weight:bold;
+}
+.menu-institute a{
+	text-decoration:none;
+	color:#595959;
+	font-family:Georgia,serif,Times; 
+	font-size:1.5em;
+	font-weight:bold;
+	
+}
+.menu-curces{
+  background:White;
+  color:#3A80C6;
+  padding-top:10px;
+  padding-bottom:10px;
+  padding-left:20px;
+  font-size:1.5em;
+  border-radius: 20px;
+      margin: 5px;
+}
+.menu li{
+	list-style-type: none;
+    background: white;
+    border-radius: 20px;
+    padding: 5px;
+    margin: 5px 5px;
+    margin-left: -20px;
+}
+.menu li a{
+	font-size:1.2em;
+	font-family: sans-serif;
+	color:#4080C6;
+	text-decoration:none;
+}
+.menu li a div{
+	font-size: 13pt;
+	width:100%;
+	padding: 7px 15px;
+	font-weight:bold;
+}
+.menu-subgroup li a{
+	font-family: sans-serif;
+	color:#4080C6;
+	text-decoration:none;
+}
+.menu-subgroup li a div{
+	width:100%;
+	font-size: 12pt;
+	padding: 2px 15px;
+	font-weight:normal;
+}
+.menu-group:focus ~ .menu-subgroup,
+.menu-group:active ~ .menu-subgroup,
+.menu-subgroup:hover{
+	display:block;
+}
+.menu-subgroup{
+	display:none; 
+}
+.menu-subgroup li{
+	    padding: 5px;
+    list-style-type: none;
+    background: #AED4F8;
+    border-radius: 20px;
+    margin: 5px 5px;
+    margin-left: -20px;
+}
+.menu div.buttons{
+	color:#595959;
+	font-family:Georgia,serif,Times; 
+	font-size:1.5em;
+	padding:13px 10px;
+	background:#3A80C6;
+	font-weight:bold;
+	border-bottom:1px solid #AED4F8;
+}
+.menu div.buttons a{
+	text-decoration:none;
+	color:White;
+	font-family:Georgia,serif,Times; 
+	font-size:18px;
+	font-weight:bold;
+}
+/*меню конец*/
+
+/* исключение */
+.message{
+	margin: 0 auto;
+    width: 600px;
+    color: #002E39;
+    border: 2px solid #002E39;
+    text-align: center;
+    padding: 0.5em;
+    font-weight: bold; 
+}
+
+.dedlineout4 {
+	padding: 10px;
+    position: fixed;
+    /*top: 30%;*/
+	top: 18%;
+    left: 50%;
+    margin-left: -180px;
+    margin-top: -100px;
+    display: block;
+    overflow: hidden;
+    z-index: 2002;
+    border: 1px solid #AED4F8;
+    width: 300px;
+    background: white;
+}
+.dedlineout4 input{
+	width: 290px;
+    display: inline-block;
+    text-align: center;
+    border: 1px solid #AED4F8;
+    padding: 4px;
+    color: #2B6198;
+	margin: 5px 0;
+}
+.dedlineout4 input[type='submit']{
+	width: 100%;
+	background: #AED4F8;
+	cursor:pointer;
+}
+.dedlineout4 input[type='submit']:hover{
+	background:#DCEEFF;
+}
+.bg{
+	position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,.5);
+    z-index: 2000;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+#tableEditTitle{
+	/*width: 150px;*/
+	width: 200px;
+    margin: 0 auto;
+    padding: 5px;
+    font-size: 12pt;
+    font-weight: bold;
+    text-align: center;
+    color: #245381;
+}
+#tableEditTitle a{
+	font-weight: normal;
+    font-size: 11pt;
+}
+#submitTableEdit{
+    background: #3A80C6;
+    cursor: pointer;
+    text-align: center;
+    border: 1px solid #3A80C6;
+    color: #2B6198;
+    color: white;
+}
+#submitTableEdit:hover{
+	background: #4EA7FF;
+}

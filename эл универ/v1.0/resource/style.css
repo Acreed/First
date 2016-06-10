@@ -1,0 +1,186 @@
+body 
+{
+		font: 12px/18px Arial, sans-serif; 
+		width: 99%; 
+		background: #FFFFFF;
+}
+.wrapper {width: 100%; margin: 0 auto}
+.content {width: 100%;  background: #fff}
+.Page {}
+
+input[type=text], input[type=password], input[type=email]
+{
+		margin: 10px;
+        padding: 5px 5px;
+        height: 20px;
+        width: 90%;
+        border: 1px solid #000000;
+        background: #f1f1f1;
+		margin-bottom: 5px;
+}
+input[type=submit], input[type=reset] {margin: 10px;width:94% ;color: #000; text-decoration: none; background: #D8D8D8; padding: 8px; border: 1px solid #000000; font-weight: bold; } 
+input[type=submit]:hover, input[type=reset]:hover { background: #E6E6E6}
+
+.choose{width: 500px;margin: 50px auto;}
+.choose a{
+display:block;
+width: 546px;
+  line-height: 2.2em;
+  text-decoration:none;
+  font-size: 15px;
+  text-align: center;
+  border:1px solid black;
+  color:black} 
+
+.logform {width:300px;position:absolute;left:50%; border: 1px solid black; top:50%; margin: -100px 0 0 -100px;}
+
+#calendar3 {
+margin: 10px auto;
+  width: 184px;
+  line-height: 1.2em;
+  font-size: 15px;
+  text-align: center;
+  border:1px solid black;
+}
+#calendar3 thead tr:last-child {
+ font-size: small;
+  color: rgb(85, 85, 85);
+}
+#calendar3 thead tr:nth-child(1) td:nth-child(2)  {
+  color: rgb(50, 50, 50);
+}
+#calendar3 thead tr:nth-child(1) td:nth-child(1):hover, #calendar3 thead tr:nth-child(1) td:nth-child(3):hover {
+  cursor: pointer;
+}
+#calendar3 tbody td, #calendar3 tbody td:nth-child(n+6) {
+font-family: arial,sans-serif;
+  font-size: 11px;
+color: rgb(68,68,68);
+text-decoration: none;
+  user-select: none;
+}
+
+#calendar3 tbody td.today {
+  outline: 3px solid black;
+}
+
+#calendar3 tbody td a{
+width:12px;
+  display: inline-block;
+  font-family: arial,sans-serif;
+  font-size: 11px;
+  color: rgb(68,68,68);
+  text-decoration: none;
+  user-select: none;
+  padding: .2em 1.2em;
+  border-radius: 10px;
+  transition: all .218s ease 0s;
+}
+#calendar3 tbody td a:hover {
+  color: black;
+  background: #f7f7f7 linear-gradient(#f7f7f7, #f1f1f1);
+  box-shadow: 0 1px 2px rgba(0,0,0,.1);
+}
+#calendar3 tbody td a:active {
+  color: rgb(51,51,51);
+  background: rgb(238,238,238) linear-gradient(rgb(238,238,238), rgb(224,224,224));
+  box-shadow: 0 1px 2px rgba(0,0,0,.1) inset;
+}
+#calendar3 tbody td a.today{
+  outline: 1px solid black;
+}
+#calendar3 tbody td .None{
+	width:12px;
+  display: inline-block;
+  font-family: arial,sans-serif;
+  font-size: 11px;
+  color: rgb(68,68,68);
+  text-decoration: none;
+  user-select: none;
+  padding: .2em 1.2em;
+  border-radius: 10px;
+  transition: all .218s ease 0s;
+  background:#BDBDBD;
+}
+
+#calendarW {
+border-collapse: collapse;
+margin: 0px auto;
+  /*width: 546px;*/
+  line-height: 1.2em;
+  font-size: 15px;
+  text-align: center;
+  border:1px solid black;
+}
+#calendarW thead tr:last-child {
+ font-size: small;
+  color: rgb(85, 85, 85);
+}
+#calendarW thead tr:nth-child(1) td:nth-child(2)  {
+  color: rgb(50, 50, 50);
+}
+#calendarW thead tr:nth-child(1) td:nth-child(1):hover, #calendarW thead tr:nth-child(1) td:nth-child(3):hover {
+  cursor: pointer;
+}
+#calendarW tbody td, th{
+padding:0 10px;
+font-family: arial,sans-serif;
+  font-size: 11px;
+color: rgb(68,68,68);
+text-decoration: none;
+min-width: 20px;
+  user-select: none;
+ border: 1px solid black;
+}
+#calendarW tbody td .FIO{
+	text-align:left;
+}
+#calendarW tbody td a{
+width: 78px;
+  display: inline-block;
+  font-family: arial,sans-serif;
+  font-size: 11px;
+  color: rgb(68,68,68);
+  text-decoration: none;
+  user-select: none;
+  padding: .2em 1.2em;
+  transition: all .218s ease 0s;
+}
+#calendarW tbody td a:hover {
+  color: black;
+  background-color: #E6E6E6;
+}
+#calendarW tbody td a:active {
+  color: rgb(51,51,51); 
+  background-color: rgb(238,238,238);
+}
+
+a.backToCal{position:fixed;margin:0 10px;border:1px solid black; border-radius:20px;font-weight:bolder; float:left; padding:10px 16px; cursor:pointer;color:black; text-decoration:none}
+a.backToCal:hover{background:#E6E6E6}
+
+.monthname {margin:0 auto; width:150px;text-align:center;font-size:15px;} 
+.wdname {margin:10px auto; width:460px;text-align:center;font-size:40px;margin-bottom:15px} 
+
+a.logout{position:fixed;border:1px solid black; border-radius:20px;font-weight:bolder; left:90%; padding:10px 16px; cursor:pointer;color:black; text-decoration:none}
+a.logout:hover{background:#E6E6E6}
+
+a.strL{padding-left:5px;
+color:black;
+text-decoration: none;
+user-select: none;float:left;}
+a.strR{padding-right:5px;
+color:black;
+text-decoration: none;
+user-select: none;float:right;}
+
+.chooseAllCb{
+	text-decoration:none;
+}
+
+.saveJurnal{
+	margin:0 auto;
+	width:300px;
+}
+
+.groupname {margin:20px auto; width:300px; font-family: less;text-align:center;font-size:40px;} 
+.groupname a{margin-left:5px}
